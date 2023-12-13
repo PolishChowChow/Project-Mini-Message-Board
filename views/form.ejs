@@ -1,0 +1,31 @@
+<%-include('components/header', {title: 'Add new message'})%>
+    <main>
+        <form action="/new" method="post">
+            <h4>Add a new message</h4>
+            <div>
+                <span class="form-text">
+                    Username:
+                </span>
+                <br>
+                <input type="text" maxlength="40" placeholder="Max 40 signs" name="user" value=<%=userInput%> >
+                <br>
+                <span class="error">
+                    <%=userError%>
+                </span>
+            </div>
+            <div>
+                <span class="form-text">
+                    Message: 
+                </span>
+                <br>
+                <input type="text" maxlength="50" placeholder="Max 50 signs" name="text" value=<%=textInput%> >
+                <br>
+                <span class="error">
+                    <%=textError%>
+                </span>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+        
+    </main>
+<%-include('components/footer')%>
